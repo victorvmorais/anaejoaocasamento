@@ -7,7 +7,7 @@
    Edite apenas estas constantes para personalizar o site.
    ======================================================= */
 
-const PIX_KEY          = "INSERIR_CHAVE_PIX_DA_ANA_VANESSA"; // Ex: "ana@email.com" ou CPF
+const PIX_KEY          = "66.004.012/0001-00";
 const PIX_OWNER        = "Ana Vanessa";
 const GOOGLE_SCRIPT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";   // URL do Web App do Apps Script
 const WEDDING_DATE     = new Date("2026-06-05T16:00:00");      // Data e hora da cerimônia
