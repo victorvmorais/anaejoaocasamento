@@ -31,7 +31,7 @@ const gifts = [
   { id: 10, name: "1 tanque de gasolina para visitas à sogra",       emoji: "🚗",   price: 280,  image: IMG("1494976388531-d1058494cdd8") },
   { id: 11, name: "1 compra no mercantil do casal",                  emoji: "🛒",   price: 450,  image: IMG("1542838132-92c53300491e") },
   { id: 12, name: "1 sobremesa depois do almoço porque merecemos",   emoji: "🍰",   price: 95,   image: IMG("1488477181946-6428a0291777") },
-  { id: 13, name: "1 litrão de energético para edição de vídeos",    emoji: "😭",   price: 110,  image: IMG("1622483767028-3f66f32aef97") },
+  { id: 13, name: "1 litrão de energético para edição de vídeos",    emoji: "😭",   price: 110,  image: "https://cdn.awsli.com.br/2500x2500/2612/2612972/produto/374013833/whatsapp-image-2025-10-02-at-18-26-02-52p48f79nq.jpeg" },
   { id: 14, name: "1 noite de hambúrguer artesanal",                 emoji: "🍔",   price: 160,  image: IMG("1568901346375-23c9450c58cd") },
   { id: 15, name: "1 skincare da noiva",                             emoji: "✨",   price: 250,  image: IMG("1556228578-8c89e6adf883") },
   { id: 16, name: "1 corte de cabelo do noivo",                      emoji: "💈",   price: 90,   image: IMG("1503951914875-452162b0f3f1") },
