@@ -170,17 +170,17 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 16px 0;
-  background: rgba(247, 243, 234, 0.97);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(63, 71, 45, 0.10);
-  transition: padding var(--ease), box-shadow var(--ease);
+  padding: 22px 0;
+  background: transparent;
+  transition: background var(--ease), padding var(--ease), box-shadow var(--ease);
 }
 
 .site-header.scrolled {
-  padding: 12px 0;
-  box-shadow: 0 2px 24px rgba(63, 71, 45, 0.13);
+  background: rgba(247, 243, 234, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 0;
+  box-shadow: 0 2px 24px rgba(63, 71, 45, 0.12);
 }
 
 .nav {
@@ -197,13 +197,18 @@ h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.65rem;
   font-style: italic;
-  color: var(--olive-dark);
+  color: rgba(255, 255, 255, 0.92);
   letter-spacing: 0.08em;
   flex-shrink: 0;
+  transition: color var(--ease);
 }
 
 .nav-logo span {
   color: var(--gold-soft);
+}
+
+.site-header.scrolled .nav-logo {
+  color: var(--olive-dark);
 }
 
 .nav-links {
@@ -217,7 +222,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--olive-dark);
+  color: rgba(255, 255, 255, 0.85);
   transition: color var(--ease);
   position: relative;
   padding-bottom: 3px;
@@ -234,8 +239,11 @@ h1, h2, h3, h4 {
   transition: width var(--ease);
 }
 
-.nav-links a:hover { color: var(--olive); }
+.nav-links a:hover { color: var(--white); }
 .nav-links a:hover::after { width: 100%; }
+
+.site-header.scrolled .nav-links a { color: var(--olive-dark); }
+.site-header.scrolled .nav-links a:hover { color: var(--olive); }
 
 /* Hambúrguer */
 .nav-toggle {
@@ -254,11 +262,13 @@ h1, h2, h3, h4 {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--olive-dark);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
   transition: all var(--ease);
   transform-origin: center;
 }
+
+.site-header.scrolled .nav-toggle span { background: var(--olive-dark); }
 
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
@@ -1202,7 +1212,14 @@ h1, h2, h3, h4 {
   .nav-links a:hover { color: var(--olive) !important; }
   .nav-links a::after { display: none; }
 
-  /* header já é sempre claro — sem necessidade de override aqui */
+  /* No mobile, quando o menu está aberto o header fica sólido para legibilidade */
+  .site-header:has(.nav-links.open) {
+    background: rgba(247, 243, 234, 0.97);
+    backdrop-filter: blur(10px);
+  }
+
+  .site-header .nav-logo { color: rgba(255, 255, 255, 0.92); }
+  .site-header.scrolled .nav-logo { color: var(--olive-dark); }
 
   .historia-grid,
   .recepcao-grid {
