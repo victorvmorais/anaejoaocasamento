@@ -20,7 +20,7 @@ const IMG = (id) => `https://images.unsplash.com/photo-${id}?w=400&h=400&fit=cro
 
 const gifts = [
   { id: 1,  name: "1 ano de academia do noivo",                      emoji: "🏋️‍♂️", price: 600,  image: IMG("1534438327276-14e5300c3a48") },
-  { id: 2,  name: "1 semana de pistache da noiva",                   emoji: "💚",   price: 120,  image: IMG("1600271772470-04f36a3ca897") },
+  { id: 2,  name: "1 semana de pistache da noiva",                   emoji: "💚",   price: 120,  image: "https://baciodilatte.com.br/wp-content/themes/baciodilatte/assets/images/img-content_banner-il-pistacchio-mobile.png" },
   { id: 3,  name: "1 date no sushi",                                 emoji: "🍣",   price: 220,  image: IMG("1579871494447-9811cf80d66c") },
   { id: 4,  name: "2 pizzas de sexta-feira",                         emoji: "🍕",   price: 140,  image: IMG("1565299624946-b28f40a0ae38") },
   { id: 5,  name: "1 cafézinho pós culto",                           emoji: "☕",   price: 90,   image: IMG("1509042239860-f550ce710b93") },
