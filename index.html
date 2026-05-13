@@ -285,6 +285,19 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Se o script.js estiver na raiz do repo (GitHub), use "script.js".
+       Se estiver dentro da pasta js/, use "js/script.js". -->
+  <script src="script.js"></script>
+  <script>
+    // Fallback: tenta carregar de js/ se o root falhar
+    (function() {
+      var scripts = document.querySelectorAll('script[src="script.js"]');
+      if (scripts.length && typeof updateCountdown === 'undefined') {
+        var s = document.createElement('script');
+        s.src = 'js/script.js';
+        document.body.appendChild(s);
+      }
+    })();
+  </script>
 </body>
 </html>
