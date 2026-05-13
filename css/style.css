@@ -611,16 +611,16 @@ h1, h2, h3, h4 {
 }
 
 .event-info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 36px;
   padding-bottom: 36px;
   border-bottom: 1px solid var(--beige);
 }
 
 .event-info-grid.compact {
-  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  gap: 32px;
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -629,30 +629,55 @@ h1, h2, h3, h4 {
 
 .event-info-item {
   display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--beige);
+}
+
+.event-info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.event-info-item:first-child {
+  padding-top: 0;
+}
+
+.event-info-grid.compact .event-info-item {
+  border-bottom: none;
+  padding: 0;
   align-items: flex-start;
-  gap: 14px;
 }
 
 .info-icon {
-  font-size: 1.6rem;
-  margin-top: 2px;
+  font-size: 1.5rem;
   flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.info-text {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex: 1;
+  flex-wrap: wrap;
 }
 
 .info-label {
-  display: block;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--olive-light);
-  margin-bottom: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .info-value {
-  display: block;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   font-weight: 400;
   color: var(--olive-dark);
   line-height: 1.25;
